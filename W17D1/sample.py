@@ -1,22 +1,40 @@
 # Example #1 Ternary Operator
-# is_good = True
-# dragon = "Tootless" if is_good else "Smaug"
-# print(dragon)
+is_good = True
+dragon = "Tootless" if is_good else "Smaug"
+print(dragon)
+
 
 # Example #2 Random Numbers
-# import random
-# dragons = ['Puff', 'Toothless', 'Falkor', 'Draco']
-# dragonPick = dragons[random.randint(0, len(dragons) - 1)]
-# # dragonPick = random.choice(dragons)
-# print(dragonPick)
+import random
+dragons = ['Puff', 'Toothless', 'Falkor', 'Draco']
+dragonPick = dragons[random.randint(0, len(dragons) - 1)]
+# dragonPick = random.choice(dragons)
+print(dragonPick)
+
 
 # Example #3 User Input
-# answer = input('Who is the coolest dragon? ')
-# print(f'You thought {answer} was the coolest dragon...')
+answer = input('Who is the coolest dragon? ')
+print(f'You thought {answer} was the coolest dragon...')
+
 
 # Example #4 Importing Files
 f = open("words.txt", "r")
 words = [ x.split(',') for x in f ][0]
 print(words)
 
-# Example #5 Routes
+
+# Example #5 Classes
+class Book:
+    def __init__(self, title, series, author):
+        self.title = title
+        self.series = series
+        self.author = author
+
+    def get_information(self):
+        return f'{self.title} by {self.author}'
+
+
+# Example #6 Routes  (can't test)
+@app.route('/item/<id>')
+def item(id):
+    return f'<h1>Item ID:{id}</h1>'

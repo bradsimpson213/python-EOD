@@ -1,5 +1,4 @@
-/* File Reading with fs VS Open in Python
-Route in express VS Route in Flask */
+/* Route in express VS Route in Flask */
 
 // Example #1 Ternary Operator
 // let isGood = true;
@@ -13,16 +12,25 @@ Route in express VS Route in Flask */
 // console.log(dragonPick);
 
 // Example #3 User Input
-const readline = require('readline');
+// const readline = require('readline');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout
+// });
 
-rl.question('Who is the coolest dragon? ', (answer) => {
-  console.log(`You thought ${answer} was the coolest dragon...`);
-  rl.close();
-});
+// rl.question('Who is the coolest dragon? ', (answer) => {
+//   console.log(`You thought ${answer} was the coolest dragon...`);
+//   rl.close();
+// });
 
 // Example #4 Importing Files
+const fs = require("fs");
+let words = [];
+
+fs.readFile("words.txt", "utf8", (err, data) => {
+  if (err) {
+    console.log(err);
+  }
+
+});

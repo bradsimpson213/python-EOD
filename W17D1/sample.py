@@ -11,7 +11,10 @@
 # print(dragonPick)
 
 # Example #3 User Input
-answer = input('Who is the coolest dragon? ')
-print(f'You thought {answer} was the coolest dragon...')
+# answer = input('Who is the coolest dragon? ')
+# print(f'You thought {answer} was the coolest dragon...')
 
 # Example #4 Importing Files
+f = open("words.txt", "r")
+words = [ x.rstrip() for x in f]
+print(words)

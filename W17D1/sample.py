@@ -16,6 +16,7 @@
 
 # Example #4 Importing Files
 f = open("words.txt", "r")
-print(f)
 words = [ x.split(',') for x in f ][0]
 print(words)
+
+# Example #5 Routes

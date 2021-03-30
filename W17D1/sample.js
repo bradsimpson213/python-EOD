@@ -35,3 +35,6 @@ fs.readFile("words.txt", "utf8", (err, data) => {
   words = data.split(',');
   console.log(words);
 });
+
+// Example #5 Routes
+

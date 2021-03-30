@@ -1,5 +1,4 @@
-/* Readline in JS VS Input in Python
-File Reading with fs VS Open in Python
+/* File Reading with fs VS Open in Python
 Route in express VS Route in Flask */
 
 // Example #1 Ternary Operator
@@ -26,4 +25,4 @@ rl.question('Who is the coolest dragon? ', (answer) => {
   rl.close();
 });
 
-console.log(answer)
+// Example #4 Importing Files

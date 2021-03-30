@@ -16,5 +16,6 @@
 
 # Example #4 Importing Files
 f = open("words.txt", "r")
-words = [ x.rstrip() for x in f]
+print(f)
+words = [ x.split(',') for x in f ][0]
 print(words)

@@ -17,7 +17,7 @@ answer = input('Who is the coolest dragon? ')
 print(f'You thought {answer} was the coolest dragon...')
 
 
-# Example #4 Importing Files
+# Example #4 Reading Files
 f = open("words.txt", "r")
 words = [ x.split(',') for x in f ][0]
 print(words)

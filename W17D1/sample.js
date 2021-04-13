@@ -25,7 +25,7 @@ rl.question('Who is the coolest dragon? ', (answer) => {
 });
 
 
-// Example #4 Importing Files
+// Example #4 Reading Files
 const fs = require("fs");
 let words = [];
 
@@ -38,7 +38,15 @@ fs.readFile("words.txt", "utf8", (err, data) => {
 });
 
 
-// Example #5 Classes
+// Example $5 Array.map & arrow function
+const array1 = [1, 4, 9, 16];
+
+const map1 = array1.map(x => x * 2);
+
+console.log(map1)
+
+
+// Example #6 Classes
 class Book {
   constructor(title, series, author) {
     this.title = title;
@@ -52,7 +60,7 @@ class Book {
 };
 
 
-// Example #6 Routes (can't test)
+// Example #7 Routes (can't test)
 app.get('/item/:id', (req, res) => {
   res.send(`<h1>Item ID: ${req.params.id}</h1>`);
 });

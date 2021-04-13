@@ -23,7 +23,12 @@ words = [ x.split(',') for x in f ][0]
 print(words)
 
 
-# Example #5 Classes
+# Example #4 List.map and Lambda
+
+
+
+
+# Example #6 Classes
 class Book:
     def __init__(self, title, series, author):
         self.title = title
@@ -34,7 +39,7 @@ class Book:
         return f'{self.title} by {self.author}'
 
 
-# Example #6 Routes  (can't test)
+# Example #7 Routes  (can't test)
 @app.route('/item/<id>')
 def item(id):
     return f'<h1>Item ID:{id}</h1>'

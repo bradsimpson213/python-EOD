@@ -19,5 +19,6 @@ The help() function
 Show help function run on:
     1. Int
     2. Float
-    3. String
-    4. List
+    3. Boolean
+    4. String
+    5. List

@@ -8,10 +8,10 @@ Intro to Python vs JavaScript (High level comparison)
         b. Random Numbers
         c. User Input
         d. Reading Files
-        e. Classes
-        f. Route
+        e. Built in Array/List (Map)
+        f. Classes
+        g. Route
 
-Note:  Maybe add an arrow vs lamba function (with built in for lists/arrays)
 
 ## W17D2
 

@@ -10,4 +10,13 @@ letters= ['a', 'b', 'c']
 # help(num2)
 # help(boolean)
 
-help(letters)
+# help(letters)
+
+# Doc strings
+
+def double(num):
+    '''function that takes in a number as an arguement and return 2 times its value'''
+    return num * 2
+
+
+help(double)

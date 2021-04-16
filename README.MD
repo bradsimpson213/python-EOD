@@ -22,3 +22,12 @@ Show help function run on:
     3. Boolean
     4. String
     5. List
+
+
+## W17D4
+
+Python Classes
+    Revisit optional Rock Paper Scissors Project from W9ish
+    Look at JS solution code
+    Have Python Skeleton
+    Code with students the RPS Python Class (Command Line)

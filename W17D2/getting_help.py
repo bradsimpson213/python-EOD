@@ -14,9 +14,9 @@ letters= ['a', 'b', 'c']
 
 # Doc strings
 
-def double(num):
-    '''function that takes in a number as an arguement and return 2 times its value'''
-    return num * 2
+# def double(num):
+#     '''function that takes in a number as an arguement and return 2 times its value'''
+#     return num * 2
 
 
-help(double)
+# help(double)

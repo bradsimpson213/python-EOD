@@ -48,7 +48,7 @@
 
 
 # Example #7 Routes  (can't test)
-# @app.route('/item/<id>')
-# def item(id):
-#     return f'<h1>Item ID:{id}</h1>'
+@app.route('/item/<id>')
+def item(id):
+    return f'<h1>Item ID:{id}</h1>'
 

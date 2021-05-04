@@ -62,6 +62,6 @@
 
 
 // Example #7 Routes (can't test)
-// app.get('/item/:id', (req, res) => {
-//   res.send(`<h1>Item ID: ${req.params.id}</h1>`);
-// });
+app.get('/item/:id', (req, res) => {
+  res.send(`<h1>Item ID: ${req.params.id}</h1>`);
+});

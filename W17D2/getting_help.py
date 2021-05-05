@@ -1,14 +1,12 @@
 # The help() function
 
 num1 = 245
-num2 = 34.56
 word = "Pizza"
 letters= ['a', 'b', 'c']
 
-help()
+# help()
 # help(num1)
 # help(num2)
-# help(word)
 # help(str)
 # help(letters)
 
@@ -23,23 +21,23 @@ help()
 
 # help(double)
 
-# class Book:
-    # """
-    # Class definition to create Book objects
-    # """
+class Book:
+    """
+    Class definition to create Book objects
+    """
     
-#     def __init__(self, title, series, author):
-#         """Book Class initializor"""
-#         self.title = title
-#         self.series = series
-#         self.author = author
+    def __init__(self, title, series, author):
+        """Book Class initializor"""
+        self.title = title
+        self.series = series
+        self.author = author
 
 
-#     def get_information(self):
-#         '''Returns the author and title of the Book instance '''
-#         return f'{self.title} by {self.author}'
+    def get_information(self):
+        '''Returns the author and title of the Book instance '''
+        return f'{self.title} by {self.author}'
 
 
-# help(Book)
+help(Book)
 
 

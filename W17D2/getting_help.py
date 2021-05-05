@@ -30,7 +30,7 @@ class Book:
         """Book Class initializor"""
         self.title = title
         self.series = series
-        self.author = author
+        self.author = authorq
 
 
     def get_information(self):

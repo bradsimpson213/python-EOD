@@ -1,4 +1,5 @@
 import random
+import os
 
 class RockPaperScissors:
     '''Class to create games of Rock Paper Scissors'''
@@ -17,6 +18,7 @@ class RockPaperScissors:
         print(f'Current score is {self.wins} Wins, {self.ties} Ties, and {self.losses} Losses...')
         play_again = input("Would you like to play again (yes or no)?: ")
         if play_again == 'yes':
+            os.system('\clear')
             self.player_move()
         else:
             print(f"{self.player}'s final score was {self.wins} Wins, {self.ties} Ties, and {self.losses} Losses")
@@ -64,7 +66,7 @@ class RockPaperScissors:
 play_game = RockPaperScissors('Brad')
 play_game.player_move()
 
-help(RockPaperScissors)
+# help(RockPaperScissors)
    
             
 

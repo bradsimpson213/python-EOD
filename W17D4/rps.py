@@ -8,7 +8,7 @@ class RockPaperScissors:
         self.wins = 0
         self.ties = 0
         self.losses = 0
-        self.choices = ('rock', 'paper', 'scissors')
+        self.choices = [ 'rock', 'paper', 'scissors']
         self.player_choice = ''
         self.computer_choice = ''
 

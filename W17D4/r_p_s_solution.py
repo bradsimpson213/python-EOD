@@ -9,40 +9,29 @@ class RockPaperScissors:
         self._player_choice = None
         self._computer_choice = None
         self._score = {'wins': 0, 'losses': 0, 'ties': 0}
+        self.player = input('Choose your move ( rock, paper, or scissors): ')
 
     @property
     def player(self):
         return self._player_choice
 
     @player.setter
-    def player(self):
-        play = True
-        while play:
-            player_input = str(input('Choose your move ( rock, paper, or scissors): '))
-            if player_input in self._choices:
-                self._player_choice = player_input
-            else:
-                print(f'"{player_input}" is not a valid move, please try again')
+    def player(self, value):
+        if value in self._choices:
+            self._player_choice = value
+            self.computer = random.choice(self._choices)
+        else:
+            print(f'"{value}" is not a valid move, please try again')
+            self.player = input('Choose your move ( rock, paper, or scissors): ')
 
     @property
     def computer(self):
         return self._computer_choice
 
     @computer.setter
-    def computer(self):
-        self._computer_choice = random.choice(self._choices)
-
-    def report_score(self):
-        '''Returns the game score'''
-        print(f'''Current score is {self._score['wins']} Wins, {self._score['ties']} Ties, 
-            and {self._score['losses']} Losses...''')
-        play_again = input("Would you like to play again (yes or no)?: ")
-        if play_again == 'yes':
-            os.system('\clear')
-            return True
-        else:
-            print(f"{self.player}'s final score was {self.wins} Wins, {self.ties} Ties, and {self.losses} Losses")
-            return False
+    def computer(self, value):
+        self._computer_choice = value
+        self.decide_winner()
 
     def decide_winner(self):
         '''Determines the results of a game round (win/loss/tie)'''
@@ -59,14 +48,26 @@ class RockPaperScissors:
             self._score['losses'] += 1
         self.report_score()
 
-
-play_rps = RockPaperScissors()
-while play_rps.report_score():
-    play_rps.player()
-    play_rps.computer()
-    play_rps.decide_winner()
-    play_rps.report_score()
-# help(RockPaperScissors)
-   
+    def report_score(self):
+        '''Returns the game score'''
+        print(f'''Current score is: 
+            {self._score['wins']} Wins {self._score['ties']} Ties {self._score['losses']} Losses''') 
+        play_again = input("Would you like to play again (yes or no)?: ")
+        if play_again == 'yes':
+            os.system('\clear')
+            self.player = input('Choose your move ( rock, paper, or scissors): ')
+        else:
+            print(f'''{self._player}'s final score was: 
+                {self._score['wins']} Wins {self._score['ties']} Ties {self._score['losses']} Losses''')
             
 
+play_rps = RockPaperScissors()
+
+
+   # def player_move(self):
+    #     '''Prompts game player for move input'''
+    #     self.player = input('Choose your move ( rock, paper, or scissors): ')
+   
+    # def computer_move(self):
+    #     '''Generated a random computer game move'''
+    #     self.computer = random.choice(self._choices)

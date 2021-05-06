@@ -4,47 +4,42 @@ import os
 class RockPaperScissors:
     '''Class to create games of Rock Paper Scissors'''
     def __init__(self, player="player 1"):
-        self.player = input("Please enter your player name: ")
-        self.wins = 0
-        self.ties = 0
-        self.losses = 0
-        self.choices = ('rock', 'paper', 'scissors')
-        self.player_choice = ''
-        self.computer_choice = ''
-
+        self._player1 = input("Please enter your player name: ")
+        self._choices = ('rock', 'paper', 'scissors')
+        self._player = ''
+        self._computer = ''
+        self._score = {'wins': 0, 'losses': 0, 'ties': 0}
 
     def report_score(self):
         '''Returns the game score'''
-        print(f'Current score is {self.wins} Wins, {self.ties} Ties, and {self.losses} Losses...')
+        print(f"Current score is {self._score['wins']} Wins, {self._score['ties']} Ties, and {self._score['losses']} Losses...")
         play_again = input("Would you like to play again (yes or no)?: ")
         if play_again == 'yes':
             os.system('\clear')
             self.player_move()
         else:
-            print(f"{self.player}'s final score was {self.wins} Wins, {self.ties} Ties, and {self.losses} Losses")
+            print(f"{self._player1}'s final score was {self._score['wins']} Wins, {self._score['ties']} Ties, and {self._score['losses']} Losses")
 
 
     def decide_winner(self):
         '''Determines the results of a game round (win/loss/tie)'''
-        if self.player_choice == self.computer_choice:
-            print(f'{self.player} and the Computer both chose "{self.player_choice}", its a Tie!')
-            self.ties +=1
-            self.report_score()
-            return
-        if ((self.player_choice == 'rock' and self.computer_choice == 'scissors')
-            or (self.player_choice == 'paper' and self.computer_choice == 'rock')
-            or (self.player_choice == 'scissors' and self.computer_choice == 'paper')):
-            print(f'{self.player} played "{self.player_choice}" and the Computer played "{self.computer_choice}", You Win!')
-            self.wins +=1
+        if self._player == self._computer:
+            print(f'{self._player1} and the Computer both chose "{self._player}", its a Tie!')
+            self._score['ties'] += 1 
+        elif ((self._player == 'rock' and self._computer == 'scissors')
+            or (self._player == 'paper' and self._computer == 'rock')
+            or (self._player == 'scissors' and self._computer == 'paper')):
+            print(f'{self._player1} played "{self._player}" and the Computer played "{self._computer}", You Win!')
+            self._score['wins'] += 1
         else:
-            print(f'{self.player} played "{self.player_choice}" and the Computer played "{self.computer_choice}", You Lose!')
-            self.losses +=1
+            print(f'{self._player1} played "{self._player}" and the Computer played "{self._computer}", You Lose!')
+            self._score['losses'] += 1
         self.report_score()
 
 
     def computer_move(self):
         '''Generated a random computer game move'''
-        self.computer_choice = random.choice(self.choices)
+        self._computer = random.choice(self._choices)
         self.decide_winner()
 
 
@@ -53,8 +48,8 @@ class RockPaperScissors:
         play = True
         while play:
             player_input = input('Choose your move ( rock, paper, or scissors): ')
-            if player_input in self.choices:
-                self.player_choice = player_input
+            if player_input in self._choices:
+                self._player = player_input
                 play = False
             else:
                 print(f'"{player_input}" is not a valid move, please try again')
@@ -63,8 +58,3 @@ class RockPaperScissors:
 
 play_game = RockPaperScissors()
 play_game.player_move()
-
-# help(RockPaperScissors)
-   
-            
-

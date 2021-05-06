@@ -2,10 +2,16 @@ class RockPaperScissors:
     def __init__(self):
     
     
-    def player_move(self):
+#   player getter
 
 
-    def computer_move(self):
+#   player setter
+
+
+#   computer getter
+
+
+#   computer setter
 
 
     def decide_winner(self):

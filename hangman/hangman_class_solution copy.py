@@ -3,22 +3,32 @@ from stages import stages
 import random
 import os
 
-# reads the words file, strips away new lines and turns it to a list
-f = open("words.txt", "r")
-words = [ x.rstrip() for x in f]
-# print(words)
+
+class Hangman:
+    def __init__(self):
+        # following 3 lines read the words file, strips away new lines and turns it to a list
+        # and then randomly chooses a word from that list
+        self._f = open("words.txt", "r")
+        self._words = words = [ x.rstrip() for x in f]
+        self._choosen_word = random.choice(words)
+        # comment in the next line for testing or if you are a cheater
+        # print(f"Psst, the word is {choosen_word}")
+        self._lives = 6
+        self._guesses = []
+        print('Welcome to Hangman!')
+
+    def display_game(self):
+
+        display = [ "_" for x in range(len(self._choosen_word))]
+        print(' '.join(display))
+        print(stages[self._lives])
 
 
-def hangman():
-    print('Welcome to Hangman!')
-    choosen_word = random.choice(words)
-    # comment in the next line for testing or if you are a cheater
-    # print(f"Psst, the word is {choosen_word}")
-    display = [ "_" for x in range(len(choosen_word))]
-    lives = 6
-    guesses = []
-    print(' '.join(display))
-    print(stages[lives])
+    def check_guess(self):
+
+
+    
+   
 
     play = True
     while play:

@@ -1,9 +1,17 @@
 body {
+    color: white;
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
+.title {
     font-size: 60px;
-    color: red;
+}
+
+.jinga {
+    font-size: 30px;
+}
+
+p {
+    font-weight: bold;
 }

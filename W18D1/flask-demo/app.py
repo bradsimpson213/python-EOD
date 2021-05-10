@@ -2,9 +2,6 @@ from flask import (Flask, render_template)
 
 app = Flask(__name__)
 
-# @app.before_request
-# def before_request_function():
-#     print("Yoooo, you hit a route!")
 
 
 @app.route('/')
@@ -22,7 +19,3 @@ def greeting(name):
 def sup_dude():
     return render_template('index.html')
 
-
-# @app.route('')
-# def lost():
-#     return f"<h1>You lost buddy!</h1>"

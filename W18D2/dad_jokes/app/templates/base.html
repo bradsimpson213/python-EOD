@@ -1,12 +1,15 @@
 <html>
 
     <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='jokes.css') }}">
         <title>Dad Jokes - {{ page }}</title>
     </head>
     <nav>
         <a href="/" >Home</a>
+        <span> - </span>
         <a href="/jokes">See All Jokes</a>
-        <a href="/newjoke">Add a New Joke</a>
+        <span> - </span>
+        <a href="/addjoke">Add a New Joke</a>
     </nav>
     <body>
         {% block content %} {% endblock %}

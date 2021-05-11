@@ -60,8 +60,8 @@ jokes = [
         'rating': "PG"
     },
     {
-        'joke': "How do you get a squirrel out of a tree?",
-        'punchline': "Show him your nutts...",
+        'joke': "What was Forrest Gump’s email password?",
+        'punchline': "1forrest1...",
         'rating': "PG"
     },
     {

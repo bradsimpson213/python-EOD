@@ -25,13 +25,14 @@ def add_joke():
     form = JokeForm()
 
     if form.validate_on_submit():
-        total_jokes = len(jokes)+1
+        new_id = len(jokes) + 1
         new_joke = {
+            'jokeid': new_id,
             'joke': form.data['joke'],
             'punchline': form.data['punchline'],
             'rating': form.data['rating']
         }
-        jokes[i] = new_joke
+        jokes.append(new_joke)
         return redirect('/jokes')
 
     return render_template('jokeform.html', form=form, errors=form.errors)

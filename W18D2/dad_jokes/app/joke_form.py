@@ -5,4 +5,4 @@ class JokeForm(FlaskForm):
     joke = StringField('Joke')
     punchline = StringField('Punchline')
     rating = SelectField('Rating', choices=[('G', 'General'), ('PG', 'Parental Guidance'), ('R', 'Restricted')])
-    submit = SubmitField('Save')    
+    submit = SubmitField('Submit')    

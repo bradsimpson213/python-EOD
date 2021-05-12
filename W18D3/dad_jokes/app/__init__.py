@@ -1,10 +1,11 @@
 from flask import Flask, render_template, redirect
 from .config import Config
-from data import jokes
+# from data import jokes
 from .joke_form import JokeForm
 import random
 # new imports
 from flask_sqlalchemy import SQLAlchemy
+from .models import Joke
 
 
 app = Flask(__name__)

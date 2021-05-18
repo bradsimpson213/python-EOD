@@ -16,7 +16,7 @@ class Joke(db.Model):
             'joke_body': self.joke_body,
             'punchline': self.punchline,
             'rating': self.rating,
-            'user': self.user.to_dict()
+            'user': self.user.to_dict_no_jokes()
         }
     
     def to_dict_no_user(self):

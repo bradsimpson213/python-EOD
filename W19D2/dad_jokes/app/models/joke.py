@@ -16,13 +16,27 @@ class Joke(db.Model):
             'joke_body': self.joke_body,
             'punchline': self.punchline,
             'rating': self.rating,
-            'user': self.user.to_dict_no_jokes()
+            'user': self.user.to_dict()
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-    def to_dict_no_user(self):
-             return {
-            'id': self.id,
-            'joke_body': self.joke_body,
-            'punchline': self.punchline,
-            'rating': self.rating,
-        }
+    # def to_dict_no_user(self):
+    #          return {
+    #         'id': self.id,
+    #         'joke_body': self.joke_body,
+    #         'punchline': self.punchline,
+    #         'rating': self.rating,
+    #     }

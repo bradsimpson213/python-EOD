@@ -1,6 +1,5 @@
 from .db import db
 
-
 class Joke(db.Model):
     __tablename__ = 'jokes'
     id = db.Column(db.Integer, primary_key=True)
@@ -10,3 +9,20 @@ class Joke(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
    
     user = db.relationship('User', back_populates="joke")
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'joke_body': self.joke_body,
+            'punchline': self.punchline,
+            'rating': self.rating,
+            'user': self.user.to_dict()
+        }
+    
+    def to_dict_no_user(self):
+             return {
+            'id': self.id,
+            'joke_body': self.joke_body,
+            'punchline': self.punchline,
+            'rating': self.rating,
+        }

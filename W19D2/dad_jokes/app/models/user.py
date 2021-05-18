@@ -13,5 +13,6 @@ class User(db.Model):
         return {
             "id": self.id,
             "username": self.username,
-            "email": self.email
+            "email": self.email,
+            "jokes": [j.to_dict_no_user() for j in self.joke]
         }

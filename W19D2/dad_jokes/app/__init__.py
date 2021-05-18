@@ -1,9 +1,11 @@
 from flask import Flask, redirect, request
 from flask_migrate import Migrate
-from .config import Config
-from .joke_form import JokeForm
 import random
 
+# new seed import
+from .seeds import seed_commands
+from .config import Config
+from .joke_form import JokeForm
 from .models import db, Joke, User
 
 app = Flask(__name__)
@@ -11,7 +13,8 @@ app = Flask(__name__)
 app.config.from_object(Config)
 db.init_app(app)
 Migrate(app, db)
-
+#new seed command
+app.cli.add_command(seed_commands)
 
 @app.route('/')
 def home():

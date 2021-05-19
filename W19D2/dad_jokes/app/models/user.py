@@ -14,23 +14,13 @@ class User(db.Model):
             "id": self.id,
             "username": self.username,
             "email": self.email,
-            "jokes": [j.to_dict() for j in self.joke]
+            "jokes": [j.to_dict_no_user() for j in self.joke]
         }
 
 
-
-
-
-
-
-
-
-
-
-
-    # def to_dict_no_jokes(self):
-    #        return {
-    #         "id": self.id,
-    #         "username": self.username,
-    #         "email": self.email,
-    #     }
+    def to_dict_no_jokes(self):
+           return {
+            "id": self.id,
+            "username": self.username,
+            "email": self.email,
+        }

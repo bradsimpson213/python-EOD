@@ -13,6 +13,7 @@ psycopg2-binary = "*"
 sqlalchemy = "*"
 alembic = "*"
 flask-migrate = "*"
+flask-cors = "*"
 
 [dev-packages]
 

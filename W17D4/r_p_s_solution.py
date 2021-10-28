@@ -11,9 +11,11 @@ class RockPaperScissors:
         self._score = {'wins': 0, 'losses': 0, 'ties': 0}
         self.player = input('Choose your move ( rock, paper, or scissors): ')
 
+
     @property
     def player(self):
         return self._player_choice
+
 
     @player.setter
     def player(self, value):
@@ -24,14 +26,17 @@ class RockPaperScissors:
             print(f'"{value}" is not a valid move, please try again')
             self.player = input('Choose your move ( rock, paper, or scissors): ')
 
+
     @property
     def computer(self):
         return self._computer_choice
+
 
     @computer.setter
     def computer(self, value):
         self._computer_choice = value
         self.decide_winner()
+
 
     def decide_winner(self):
         '''Determines the results of a game round (win/loss/tie)'''
@@ -47,13 +52,19 @@ class RockPaperScissors:
             print(f'{self._player} played "{self.player}" and the Computer played "{self.computer}", You Lose!')
             self._score['losses'] += 1
         self.report_score()
+        
 
     def report_score(self):
         '''Returns the game score'''
         print(f'''Current score is: 
-            {self._score['wins']} Wins {self._score['ties']} Ties {self._score['losses']} Losses''') 
-        play_again = input("Would you like to play again (yes or no)?: ")
-        if play_again == 'yes':
+            {self._score['wins']} Wins {self._score['ties']} Ties {self._score['losses']} Losses''')
+        self.keep_playing() 
+
+
+    def keep_playing(self):
+        '''Lets the player decide to play again or stop'''
+        play_again = input("Would you like to play again (y or n)?: ")
+        if play_again == 'y':
             os.system('\clear')
             self.player = input('Choose your move ( rock, paper, or scissors): ')
         else:
@@ -62,12 +73,3 @@ class RockPaperScissors:
             
 
 play_rps = RockPaperScissors()
-
-
-   # def player_move(self):
-    #     '''Prompts game player for move input'''
-    #     self.player = input('Choose your move ( rock, paper, or scissors): ')
-   
-    # def computer_move(self):
-    #     '''Generated a random computer game move'''
-    #     self.computer = random.choice(self._choices)

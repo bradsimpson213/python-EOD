@@ -20,6 +20,9 @@ p {
     margin: 10px 0px 0px 25px;
 }
 
+a {
+    margin-left: 20px;
+}
 a:visited {
    color: red;
 }

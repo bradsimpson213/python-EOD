@@ -1,2 +1,2 @@
-FLASK_APP=dad_jokes.py
+FLASK_APP=app
 FLASK_ENV=development

@@ -30,7 +30,7 @@ with app.app_context():
         rating='PG',
         user=user
     )
-
+    print('DB seeded!')
     db.session.add(user)
     db.session.add(joke1)
     db.session.add(joke2)
